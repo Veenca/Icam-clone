@@ -1,1 +1,1 @@
-console.log($('header').height())
+console.log($('html').width())
