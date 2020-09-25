@@ -48,6 +48,7 @@ header {
  }
  #contact_links li>a:hover{
     color: red;
+    background-color: transparent;
  }
  
  
@@ -58,7 +59,7 @@ header {
   }
   .nav_links li:hover{
     color: red;
-    cursor: pointer;
+    cursor:pointer;
   }
 .logo:hover{
   cursor: pointer;
@@ -76,14 +77,14 @@ ul{
 .contact_info{
  margin: 0 auto;
 }
-.icam-container-menu1{
+.icam-container-menu{
   margin: 0 10%;
   width: 80%;
   background-color: rgba(231, 231, 231, 0.315);
-  height: 34vh;
+  height: 30vh;
   position: absolute;
 }
-.icam-container-menu1 h1,h2,h3,h4,h5,h6{
+.icam-container-menu h1,h2,h3,h4,h5,h6{
   font-family: "Epilogue", sans-serif;
   font-size: 2.3vh;
   padding: 1%;
@@ -93,26 +94,55 @@ ul{
   
 }
 .icam-container-items{
+  font-size: 1.5vh;
   padding-left: 3%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
  
 }
 .icam-container-items>ul>li{
   padding-top: 10px;
+
 }
 .icam-container-items>ul{
   padding-left: 2%;
   border-left: 1px solid rgb(194, 194, 194);
+  height: 23vh;
+}
+.icam-container-items>ul>img{
+  position:absolute;
+  bottom: 20%;
 }
 li>a{
   text-decoration: none;
   color: black;
 }
 li>a:hover{
-  color:red;
+  background-color: rgb(226, 13, 13);
+  color: white;
+}
+.discoverRange{
+
+position: absolute;
+bottom: 5%;
+}
+.discoverRange>a{
+ color: red;  
+  }
+.discoverRange>a:hover{
+    background: transparent;
+    color:black;
+     }
+#local_title{
+  background-color: transparent;
+}
+#local_title:hover{
+ color: red;
 }
 
+.hide{
+  display: none;
+}
 /*---1920 x 1080 */
 @media only screen and (min-width: 1900px) {
   
