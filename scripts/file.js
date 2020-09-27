@@ -15,3 +15,24 @@ $('#main_nav>li').on('click',function(){
     $('#menu'+strcss).toggleClass("hide");
 
 })
+//Swiper
+var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+   direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      
+    },
+  
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-pagination',
+      
+    },
+  
+    // And if we need scrollbar
+    
+  })
