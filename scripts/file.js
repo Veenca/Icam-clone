@@ -36,3 +36,32 @@ var mySwiper = new Swiper('.swiper-container', {
     // And if we need scrollbar
     
   })
+  //AJAX
+  
+  const xhr =new XMLHttpRequest();
+  
+//Open Ajax Window
+let popupBtn = $('.icam-container-items>ul>li');
+let exitPopup =$('#exit-icn');
+popupBtn.on('click',function(){
+   $('.popup-window').css("display","block");
+    let par=$(this).text().toLowerCase();
+    $(this).parent().parent().parent().toggleClass("hide")
+   xhr.onreadystatechange=function (){
+     
+    if(xhr.readyState==4 ){
+      
+        if(xhr.status==200){ $('.popup-content').html(xhr.responseText);
+      
+      }else if(xhr.status==404){
+          console.log('File or resource was not found');
+      }
+    
+    }
+  };
+  xhr.open('get','other-pages/'+par+'.html',true);
+  xhr.send();
+});
+exitPopup.on('click',function(){
+    $('.popup-window').css("display","none");
+});
