@@ -77,3 +77,13 @@ popupBtn.on('click',function(){
 exitPopup.on('click',function(){
     $('.popup-window').css("display","none");
 });
+
+console.log($('#products-container>div').children().children('img'));
+$('#products-container>div').hover(
+    
+    function(){
+        $(this).children().children('img').toggleClass('hide');
+    }
+
+)
+ 
