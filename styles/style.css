@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 *{
   font-family: "Epilogue", sans-serif;
     margin : 0;
     padding: 0;
     
 }
+body{
+ 
+}
 .nav_txtelmt{
   font-family: "Epilogue", sans-serif;
-  font-weight: 500;
+  font-weight: 100;
   font-size: 16px;
   color: black;
 }
@@ -81,11 +85,11 @@ ul{
   margin: 0 10%;
   width: 80%;
   background-color: rgba(231, 231, 231, 0.952);
-  height: 30vh;
+  height: 31vh;
   position: absolute;
   z-index: 3;
 }
-.icam-container-menu h1,h2,h3,h4,h5,h6{
+.icam-container-menu h1,h2,h3,h5,h6{
   font-family: "Epilogue", sans-serif;
   font-size: 2.3vh;
   padding: 1%;
@@ -94,11 +98,14 @@ ul{
   color: rgb(182, 26, 26);
   
 }
+#container-Buisness-line{
+  grid-template-columns: repeat(6,1fr);
+}
 .icam-container-items{
   font-size: 1.5vh;
   padding-left: 3%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5,1fr);
  
 }
 .icam-container-items>ul>li{
@@ -136,6 +143,7 @@ bottom: 5%;
      }
 #local_title{
   background-color: transparent;
+
 }
 #local_title:hover{
  color: red;
@@ -145,7 +153,7 @@ bottom: 5%;
   display: none;
 }
 .swiper-container {
-  height: 100%;
+  height: 53.2vh;
   width: 100%;
 }
 .fit_img{
@@ -162,12 +170,21 @@ bottom: 5%;
   right: 10%; 
  z-index: 2;
 }
+
+#red_portion{
+  position: absolute;
+  right: auto;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  opacity: 1;
+}
 .swiper-slide>img{
   z-index: 1;
 }
 .main-top-site{
   background: red;
-  height: 55vh;
+  height: 53.2vh;
   margin: auto;
   width: 80%;
  
@@ -175,8 +192,8 @@ bottom: 5%;
 }
 #footer-contact-us{
   position: absolute;
-  z-index: 2;
-  bottom: 0%;
+  z-index: 3;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.472);
   height: 9vh;
   width: 100%;
@@ -207,37 +224,533 @@ bottom: 5%;
   bottom: 30%;
 }
 .popup-window{
+  display: none;
   width: 100%;
-  height: 100%;
+  height: 300vh;
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  
 }
 .popup-content{
- background-color: wheat;
-  
+ background-color: white;
+ position: absolute;
+ width: 75%;
+ top:10vh;
+ left: 13%;
+ right: 13%;
   border-radius: 4px;
 }
 #exit-icn{
  background-color: white; 
-  
+ padding-left: 5px; 
 }
 .social_icons>ul>li{
   max-height: 2vh;
   padding: 3px;
   background-color: red;
+  
 }
 .social_icons>ul{
 
   width: fit-content;
 }
 .social_icons{
+  position: absolute;
+ display: inline-block;
+ z-index: 4;
+ top:10vh;
+ left: 10.65%;
+ right: 13%;
+}
+.social_icons:hover{
+  cursor: pointer;
+}
+.custompage{
+  position:absolute;
+
+
+  display: inline-block;
+}
+#tab_page{
+  background: white; 
+}
+aside>ul>li>a{
+  color: rgba(0, 0, 0, 0.781);
+  font-size: 14px;
+}
+aside>ul>li{
+  padding-top: 3%;
+}
+aside>ul>li>a:hover{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+ 
+}
+.tab_center>ul>li>h4{
+  color: red;
+}
+.container {
   position: relative;
   
+  color: white;
+}
+.centered {
+  position: absolute;
+  left: 34vh;
+  top: 35vh;
+  color: white;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 25px;
+}
+.centered>a{
+  color: white;
+  text-decoration: none;
+}
+.centered>a:hover{
+  text-decoration: underline;
+}
+#products-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 80%;
+  margin-left: 10%;
+ padding-top: 1.5%;
+}
+#products-container>div{
+
+  display: inline-block;padding-left: 2.5%;
+  background-color: rgb(255, 255, 255);
+  border-left:solid rgba(146, 146, 146, 0.541);
+  border-radius: 6px;
+  position: relative;
+  
+  
+}
+#products-container>div>p>img{
+  width: auto;height: auto;
+}
+#products-container>div>p{
+  font-size: 28px;
+  font-weight: bolder;
+}
+#products-container>div:hover{
+  background-color: rgba(230, 5, 5, 0.918);
+  color: white;
+  font-weight: lighter;
+}
+#line-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: 0em;
+  width: 80%;
+  margin-left: 10%;
+ padding-top: 1.5%;
+
+}
+#industrial{
+  background-image: url("https://www.icamonline.eu/en/attachment/download/download/id/13/track/0/thumb/0/");
+}
+#Office{
+  background-image: url("https://www.icamonline.eu/en/attachment/download/download/id/15/track/0/thumb/0/");
+}
+#Healtcare{
+  background-image: url("https://www.icamonline.eu/en/attachment/download/download/id/17/track/0/thumb/0/");
+}
+#Retail{
+  background-image: url("https://www.icamonline.eu/en/attachment/download/download/id/1782/track/0/thumb/0/");
+}
+#City_logistics{
+  background-image: url("https://www.icamonline.eu/en/attachment/download/download/id/1759/track/0/thumb/0/");
+}
+#Solution_agile{
+  background-image: url("https://www.icamonline.eu/images/img-sfondo-banner-home.jpg");
+  
+}
+
+
+.bg-img{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.line-header{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  color: white;
+  font-size: 20px;
+ 
+}
+.line-header>img{
+  padding-left: 10%;
+}
+.line>p{
+  color: white;
+  padding: 2% 5% ;
+  font-family: sans-serif;
+  width: fit-content;
+  height: fit-content;
+ 
+}
+.line{
+  height: 50vh;
+  
+
+  position: relative;
+  font-size: 1.6vh;
+}
+.line-header>p>a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  top: 10%;
+  font-size: 30px;
+
+}
+.line-header>p>a:hover{
+  text-decoration: underline;
+}
+.line>ul{
+  position: relative;
+  top: 5%;
+  left:3.5%;
+}
+.line>ul>li{
+  font-family: sans-serif;
+  color: white;
+}
+.line>ul>li>a>b{
+  position: relative;
+  color: white;
+  bottom: 0px;
+}
+.line>ul>li>a>b{
+  color: white;
+  text-decoration: none;
+  top: 10%;
+  font-size: 16px;
+  
+ 
+
+}
+.bottom-link{
+  font-size: 2vh;
+}
+.bottom-link>a>b{
+  color: white;
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  text-decoration: none;
+}
+.bottom-link>a>b:hover{
+  text-decoration: underline;
+}
+#Retail>p{
+  padding-top: 10%;
+  font-family: sans-serif;
+}
+#City_logistics>div>p>a>b{
+  font-size: 27px;
+}
+#Solution_agile>p{
+  font-size: 3.5vh;
+}
+#Projects{
+ display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+  margin: auto 10%;
+ 
+
+ 
+}
+#main-Project{
+  grid-column: 1/4;
+ 
+}
+#main-Project>.proj-header>.nested{
+  grid-template-columns: 20% 80%;
+  width: 40vh;
+}
+#Projects>div{
+  height: 42vh;
+}
+.proj-header{
+  padding-top: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+.nested{
+  display: grid;
+  grid-template-columns: 20% 80%;
+ 
+  width: 30vh;
+  height: 8vh;
+  font-family: sans-serif;
+  position: relative;
+ 
+}
+#main-Project>div>.nested>img{
+  width: px;
+  height: 65px;
+  
+}
+.nested>img{
+  width: 45px;
+  height: 45px;
+
+}
+#main-Project>div>.nested>p>b{
+  font-size: 35px;
+}
+.nested>p{
+  font-size: 15px;
+}
+
+.nested>p>b{
+  
+  position: relative;
+  top: 4px;
+  font-size:25px;
+}
+
+
+.proj-header>img{
+  width: 75px;
+  height: 25px;
+
+  
+}
+#compattaImg{
+  padding-top: 0px;
+  padding-right: 20px;
+  width: 150px;
+}
+#main-Project{
+  background-image: url('https://www.icamonline.eu/en/attachment/download/download/id/1795/track/0/thumb/0/');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#main-Project>.proj-center{
+  width: 45vh;
+}
+.proj-center{
+width: 35vh;
+
+}
+.proj-center>a{
+  font-size: 32px;
+  color: black;
+  text-decoration: none;
+}
+.proj-center>a:hover{
+  text-decoration: underline;
+}
+.proj-center>p{
+  font-family: sans-serif;
+  font-size: 15px;
+  padding-top: 2%;
+}
+#Projects>div>div{
+  padding-left: 1.5%;
+}
+.proj-footer{
+  display: flex;
+  justify-content: space-between;
+}
+.share>ul{
+  position: relative;
+  top: 1vh;
+  padding-top: 20px;
+  display: block;
+  
+}
+.share>ul>li{
+  display: inline-block;
+ margin-left: 1.2vh;
+width: 2vh;
+padding: 5px ;
+height: 2.2vh;
+  text-align: center;
+  background-color: red;
+  vertical-align: middle;  
+}
+.share>ul>li>a>img{
+  width:auto ;
+  height:auto;
+ 
+}
+.share>ul>li>a:hover{
+  background-color: transparent;
+}
+.share>ul>li:hover{
+  background-color: red;
+}
+ul>li.hide{
+  display: none;
+}
+#ShareIcn{
+  margin-left: 0;
+  background-color:transparent;
+}
+
+.share>span>a{
+  position: relative;
+  top: 1.3vh;
+  color: black;
+  text-decoration: none;
+}
+.share>span>a:hover{
+  text-decoration: underline;
+}
+.watch-machines{
+
+ position: relative;;
+ top: 3.5vh;
+}
+.watch-machines>ul>li{
+  display:inline;
+  padding: 10px;
+  
+}
+#divider{
+  text-align: center;
+  background-image: url('https://www.icamonline.eu/en/attachment/download/download/id/629/track/0/thumb/0/');
+  background-size: cover;
+  background-repeat:no-repeat ;
+  height: 37vh;
+  color: white;
+  width: 80%;
+  margin:auto;
+  
+}
+#divider>h1{
+  font-size: 55px;
+  font-family: 'Noto Sans JP', sans-serif;
+ 
+  padding-top: 8vh;
+}
+#divider>p>a{
+  color: white;
+  text-decoration: none;
+  font-size: 2vh;
+}
+#divider>p>a:hover{
+  text-decoration: underline;
+}
+#divider>p{
+  margin: auto;
+  position: relative;
+  top: 1vh;
+  width: 20%;
+  padding: 1vh 2vh;
+  background-color: black;
+}
+#newsRoom{
+
+  display: grid;
+  margin: auto;
+  width: 80%;
+  grid-template-columns: 40% 60%;
+  height: 40vh;
+}
+#newsRoom>div>div{
+  padding-top: 2.3vh;
+  padding-left: 1.5vh;
+  width: 33vh;
+
+}
+.left-side{
+  background-image: url("https://www.icamonline.eu/en/attachment/download/download/id/1329/track/0/thumb/0/");
+  background-size: cover;
+  background-repeat:no-repeat ;
+}
+.left-header>p>b{
+ font-size: 20px;
+}
+.right-side{
+  text-align: center;
+  
+}
+.right-side>div{
+  display: grid;
+ text-align: left;
+  grid-template-columns: 100% 100%;
+  float: left;
+}
+.right-side>div>ul>li{
+  padding-top: 20px;
+ 
+}
+.right-side>div>ul>li{
+  font-size: 20px;
+  width: 80%;
+}
+.right-side>div>ul>li:hover{
+  color:grey;
+}
+.right-side>div>p{
+  text-align: right;
+  
+}
+.right-side>div>p>a{
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  padding-right: 10px;
+ position: relative;
+ top: 20px;
+}
+.right-side>div>p>a:hover{
+  color: grey;
+  text-decoration: underline;
+}
+footer{
+  padding-top: 20px;
+margin-left: 10%;
+ height: 6vh;
+  width: 80%;
+  
+}
+#lower{
+  height: 3vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  padding-top: 1vh;
+ }
+ #upper{
+   display: flex;
+   justify-content: space-between;
+ }
+ #upper>ul>li{
+   display: inline;
+   padding: 10px;
+ }
+ #upper>ul>li>a>img{
+   height: 2.3vh;
+ }
+ #lower>ul>li{
+   display: inline;
+   padding: 5px;
+   border-right: 2px solid;
+ }
+ #lower>ul>li:hover{
+   color: whitesmoke;
+   border-color: whitesmoke;
+   cursor: pointer;
+ }
+ #ciao{
+   padding-top: 15px;
+}
+ #number{
+   font-size: 30px;
+ }
+#ciao>li>a:hover{
+ background-color:transparent;
 }
 /*---1920 x 1080 */
 @media only screen and (min-width: 1900px) {
@@ -247,10 +760,26 @@ bottom: 5%;
       padding-right: 25vh ;
     }
     .swiper-container {
-      height: 65vh;
+      height: 60vh;
      
     }
     .main-top-site{
-      height: 65vh;
+      height: 60vh;
+      
     }
+    #red_portion{
+      display: none;
+    }
+    .centered{
+      left: 43vh;
+      background-color: rgba(179, 11, 11, 0.63);
+      padding: 50px;
+      border:solid white;
+      border-radius: 40px;
+    }
+    
+}
+/*-- Smarthphone --*/
+@media only screen and (max-width: 600px){
+
 }
