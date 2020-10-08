@@ -78,7 +78,7 @@ exitPopup.on('click',function(){
     $('.popup-window').css("display","none");
 });
 
-console.log($('#products-container>div').children().children('img'));
+
 $('#products-container>div').hover(
     
     function(){
@@ -86,4 +86,32 @@ $('#products-container>div').hover(
     }
 
 )
- 
+//Fade effect share icon on div#Projects
+ console.log();
+let Projects = $('#Projects>div');
+
+Projects.children('.proj-footer').children('.share').children('ul').children('li:not(#ShareIcn)').hide();
+Projects.hover(function()
+    { let icone=$(this).children('.proj-footer').children('.share').children('ul').children('li:not(#ShareIcn)');
+        if(icone.parent().attr('id')=="share_Office"){
+            icone.css("background-color", "#00a7eb");
+        }else if(icone.parent().attr('id')=="share_Health"){
+            icone.css("background-color", "#00adb3");
+        }
+        icone.fadeIn(200);
+       
+     });
+Projects.mouseleave(function(){
+    $(this).children('.proj-footer').children('.share').children('ul').children('li:not(#ShareIcn)').fadeOut(200);
+   
+});
+let siloShare = $('#share_Silo');
+siloShare.children('li:not(#ShareIcn)').hide();
+siloShare.parent().parent().hover(
+    function(){
+        siloShare.children('li:not(#ShareIcn)').css("background-color", "grey").fadeIn(500); 
+    }
+);
+siloShare.parent().parent().mouseleave(function(){
+    siloShare.children('li:not(#ShareIcn)').fadeOut(500); 
+});
